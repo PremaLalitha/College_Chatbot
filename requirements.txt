@@ -1,0 +1,11 @@
+Flask
+python-docx
+chromadb
+langchain
+langchain-chroma
+langchain-huggingface
+langchain-ollama
+langchain-groq
+sentence-transformers
+waitress
+gunicorn

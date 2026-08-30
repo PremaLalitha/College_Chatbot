@@ -1,0 +1,488 @@
+NATIONAL ENGINEERING COLLEGE (NEC)
+COMPLETE HIERARCHICAL OFFICIAL WEBSITE KNOWLEDGE BASE
+For NEC RAG / Admission Chatbot
+Official-source-only knowledge base: NEC website and NEC-hosted documents.
+0. GLOBAL CHATBOT RULES
+-Use only information from National Engineering College official pages/documents hosted by nec.edu.in.
+-Do not use third-party websites, search snippets, Wikipedia, social media, coaching sites or other colleges.
+-Do not guess, infer, estimate or fabricate names, fees, dates, rankings, placement figures, contacts or facilities.
+-If the requested information is not explicitly available in the retrieved NEC content, answer exactly: Please contact National Engineering College for more details.
+-For changing information, prefer the newest official NEC page and retain the academic year/date.
+-Current tuition fee, current hostel fee and current transport fee are intentionally fallback-only.
+-Online admission availability is fallback-only unless NEC explicitly confirms it on an official page.
+NEC
+About NEC
+Official name: National Engineering College (NEC).
+Established: 1984.
+Founder: Thiru. K. Ramasamy.
+Correspondent: Thiru. K. R. Arunachalam.
+Director: Dr. S. Shanmugavel.
+Principal: Dr. K. Kalidasa Murugavel.
+Address: K.R. Nagar, Kovilpatti, Thoothukudi District, Tamil Nadu – 628503.
+Institutional status: NEC is an autonomous institution affiliated with Anna University, Chennai. Official NEC materials state AICTE approval and accreditation information including NBA/NAAC.
+Vision: Transforming lives through quality education and research with human values.
+Mission 1: Maintain excellent infrastructure and highly qualified and dedicated faculty.
+Mission 2: Provide a conducive environment with humanity, wisdom, creativity and team spirit.
+Mission 3: Promote ethical behaviour and commitment to society.
+Mission 4: Partner with academic, industrial and government entities for collaborative research.
+Official website: https://nec.edu.in/
+Official source: https://nec.edu.in/
+Official source: https://nec.edu.in/introduction/
+History
+-National Engineering College was established in 1984.
+-Founder: Thiru. K. Ramasamy.
+-NEC is an autonomous institution affiliated with Anna University, Chennai.
+Founder
+Thiru. K. Ramasamy.
+Management
+-Correspondent: Thiru. K. R. Arunachalam.
+-Director: Dr. S. Shanmugavel.
+-Principal: Dr. K. Kalidasa Murugavel.
+Vision
+Transforming lives through quality education and research with human values.
+Mission
+-Maintain excellent infrastructure and highly qualified and dedicated faculty.
+-Provide a conducive environment with humanity, wisdom, creativity and team spirit.
+-Promote ethical behaviour and commitment to society.
+-Partner with academic, industrial and government entities for collaborative research.
+Location
+K.R. Nagar, Kovilpatti, Thoothukudi District, Tamil Nadu – 628503. Phone: 04632 – 222502. Mobile: 93859 76674, 93859 76684.
+Admission
+UG Admission
+UG admission information is published through the official NEC Admission page. TNEA provisional allotment information is included in the current admission document list.
+PG Admission
+PG programme and admission information is published through official NEC programme/admission pages. If a current detail is not retrieved, use the fallback.
+Eligibility
+Use the relevant current official NEC admission/programme source. Do not guess eligibility.
+Documents
+-TNEA provisional allotment order (2025 colour printout).
+-10th marksheet.
+-11th and 12th marksheets.
+-Transfer and conduct certificates.
+-Permanent community certificate for applicable categories.
+-Income certificate for post-matric scholarship for applicable SC/SCA/ST categories.
+-Four passport-size photographs.
+-Student Aadhaar copy.
+-Two photocopy sets of listed certificates, except photographs.
+-First Graduate Certificate and required declaration for applicable candidates.
+-Bonafide certificate if a sibling listed in the First Graduate certificate is pursuing a degree and has not availed the First Graduate fee concession.
+TNEA
+The official admission page explicitly uses the TNEA provisional allotment order in its document list.
+Admission Procedure
+Follow the current official NEC admission notice and programme-specific instructions. Do not invent current dates or online-admission status.
+Admission Contact
+Use current official NEC admission/contact information.
+Official source: https://nec.edu.in/admission/
+Academics
+Courses
+UG – Bachelor of Engineering: Computer Science and Engineering (B.E. CSE).
+UG – Bachelor of Engineering: Electronics and Communication Engineering (B.E. ECE).
+UG – Bachelor of Engineering: Mechanical Engineering (B.E. Mechanical).
+UG – Bachelor of Engineering: Electrical and Electronics Engineering (B.E. EEE).
+UG – Bachelor of Engineering: Civil Engineering (B.E. Civil).
+UG – Bachelor of Technology: Information Technology (B.Tech. IT).
+UG – Bachelor of Technology: Artificial Intelligence and Data Science (B.Tech. AI & DS).
+PG – Master of Engineering: Computer Science and Engineering (M.E. CSE).
+PG – Master of Engineering: Energy Engineering (M.E.).
+PG – Master of Engineering: High Voltage Engineering (M.E.).
+PG – Master of Engineering: Embedded Systems Technologies (M.E.).
+PG – Master of Technology: Information Technology (Information and Cyber Warfare) (M.Tech.).
+Programme count: NEC's current home page describes 7 undergraduate and 5 postgraduate programmes. The official Courses Offered page lists the exact programmes above.
+Special statement: NEC's Courses Offered page states that it is the only engineering college offering a High Voltage Engineering PG degree course under the affiliated colleges of Anna University.
+Accreditation statement: The official Courses Offered page states that all undergraduate courses are accredited by NBA and the Institution of Engineers, India.
+Official source: https://nec.edu.in/courses-offered/
+Curriculum
+-NEC publishes R-2023 and R-2019 UG and PG curriculum/syllabus information.
+-R-2023 UG: Mechanical, ECE, CSE, EEE, IT, Civil, AI & DS.
+-R-2023 PG: Energy Engineering, CSE, Embedded System Technologies, High Voltage Engineering, M.Tech. IT – Information and Cyber Warfare.
+Official source: https://nec.edu.in/curriculum-and-syllabus/
+Regulations
+-UG Regulation 2023
+-PG Regulation 2023
+-UG Regulation 2019
+-PG Regulation 2019
+Official source: https://nec.edu.in/ug-pg-regulations/
+Academic Calendar
+NEC publishes academic calendars for first-year UG, second/third-year UG and final-year UG/PG programmes.
+Official source: https://nec.edu.in/academic-calendar/
+Examinations
+-Controller of Examinations
+-Instructions to hall invigilators
+-Instructions to students
+-Examination rules, timetable and hall seating
+-Circulars and examination services
+Official source: https://nec.edu.in/instructions/
+Results
+Official End Semester Results are published through the NEC Results page.
+Official source: https://nec.edu.in/results/
+Board of Studies
+-NEC maintains Board of Studies meeting minutes by department.
+-The Board of Studies area includes Mechanical, ECE, CSE, EEE, IT, Civil, AI & DS and Science & Humanities.
+-ECE and CSE pages expose multiple Board of Studies meeting minutes.
+Official source: https://nec.edu.in/minutes-of-board-of-studies-meetings-contd/
+PEO / PO / PSO
+-Department pages publish Programme Educational Objectives (PEOs), Programme Outcomes (POs) and Programme Specific Outcomes (PSOs).
+-CSE PEO/PSO/PO information covers professional career, lifelong learning, innovation, application development, business intelligence, computational intelligence and cyber security.
+-Mechanical PSOs cover engineering design, thermal engineering, production/industrial engineering and management.
+-Civil PEO/PO information covers career, higher education, engineering knowledge, problem identification, design, testing, tools, sustainability, ethics, communication and lifelong learning.
+-ECE publishes PEO/PO information covering technical careers, higher education/research and leadership/social responsibility.
+Official source: https://nec.edu.in/cse-home/
+Official source: https://nec.edu.in/department-of-mechanical-engineering/
+Official source: https://nec.edu.in/department-of-civil/
+Official source: https://nec.edu.in/department-of-ece/
+Departments
+CSE
+Dr. V. Gomathi; B.E. CSE; M.E. CSE; research, PEO/PO/PSO, placement, patents, funded projects and facilities are published.
+ECE
+Dr. S. Tamilselvi; B.E. ECE; laboratories, PEO/PO, Board of Studies, research and placement information are published.
+EEE
+Dr. M. Willjuice Iruthayarajan; B.E. EEE; research, sponsored projects, publications and student activities are published.
+Mechanical
+Dr. S. Iyahraja; B.E. Mechanical; research, patents, consultancy, MoUs and special laboratories are published.
+Civil
+Dr. I. Padmanaban; B.E. Civil; infrastructure, consultancy, MoUs, PEO/PO and placement information are published.
+IT
+Dr. R. Muthukkumar; Professor & Head; B.Tech. IT; M.Tech. IT – Information and Cyber Warfare; Dr. K. G. Srinivasagan; Professor & Dean of Industrial Relations.
+AI & DS
+Dr. V. Kalaivani; B.Tech. AI & DS; placement, research, internships, consultancy, MoUs and achievements are published.
+Science & Humanities
+Dr. M. A. Neelakantan; Chemistry, Physics, Mathematics and English; supports freshman engineering education.
+Official source: https://nec.edu.in/departments/
+Campus Facilities
+Hostel
+Availability: Hostel facilities are provided for boys and girls.
+Built-up area: 21,315.46 sq.m. is stated on the general hostel facilities page.
+Gents Hostel I – general page: 159 rooms; maximum accommodation listed as 480 on the general hostel facilities page.
+Gents Hostel II – general page: 324 rooms; maximum accommodation listed as 324 on the general hostel facilities page.
+Ladies Hostel – general page: 251 rooms; maximum accommodation listed as 856.
+Important current detail: The dedicated Gents Hostel page currently gives a different room/capacity breakdown: Hostel I – 203 triple rooms, capacity 609; Hostel II – 322 single rooms, capacity 322. For a current room figure, use the dedicated hostel page and record the source date.
+Power: Uninterrupted power supply and a separate student generator are listed.
+Medical: Medical facility and free medicines for sick students are listed.
+Water: Mineral water is provided to rooms.
+Internet: 24-hour Wi-Fi is listed.
+Computer: Free computer lab facilities after class hours are listed.
+Banking: Banking facility with ATM is listed.
+Dining: Modern dining hall with hygienic vegetarian and non-vegetarian food is listed.
+Fitness: Fitness centre is listed.
+Stationery: Stationery store is listed.
+Kitchen: Modern kitchen with oven and solar steam cooking plant.
+Rooms: Individual and three-share rooms are listed on the general hostel facilities page.
+Rooms: 251 rooms.
+Accommodation: Capacity 856 students.
+Room type: Triple/single room accommodation.
+Students: The page says the hostel houses around 900 students.
+Mess: Separate kitchens and dining halls for vegetarian and non-vegetarian food.
+Mess billing: Mess bill is based on a dividing system.
+Food: The page states hygienic and healthy food with a balanced-diet system based on student selection and dietician concurrence.
+Breakfast: 7:30 a.m. – 8:50 a.m.
+Lunch: 12:50 p.m. – 1:30 p.m.
+Tea: 5:15 p.m. – 6:15 p.m.
+Dinner: 7:00 p.m. – 8:00 p.m.
+Facilities: Recreation halls, gym, indoor games, DTH, home theatre, two computer centres with 24/7 internet, library, modern kitchens, solar steam cooking systems, cooking appliances, water coolers and mineral water plants.
+Sports: Volleyball court: 1; table tennis: 2; carrom: 4; chess: 3; twister standing/sitting: 2; treadmill: 2; rowing machine: 2.
+Associate warden: Dr. R. V. Maheswari and Ms. M. Annapoopathi are listed as associate wardens on the current dedicated page.
+Resident warden: Ms. M. Bhagavathy is listed as resident warden.
+Hostel office mobile: 63822 78083.
+Hostel I: 203 rooms, triple accommodation, capacity 609 on the current dedicated Gents Hostel page.
+Hostel II: 322 rooms, single accommodation, capacity 322 on the current dedicated Gents Hostel page.
+Residence: The dedicated page says the two men's hostels provide residence for around 800 boys.
+Power: Uninterrupted power supply and separate student generator.
+Medical: Medical facility with free medicines for sick students.
+Water: Mineral water.
+Wi-Fi: 24-hour Wi-Fi.
+Computer: Free computer lab after class hours.
+Banking: Banking facility with ATM.
+Food: Modern dining hall serving hygienic vegetarian and non-vegetarian food.
+Fitness: Fitness centre.
+Kitchen: Modern kitchen with oven and solar steam cooking plant.
+Recreation: Recreation halls, gym, indoor games, DTH and home theatre.
+Sewage treatment: A sewage treatment plant with capacity of 2 lakh litres per day is stated.
+Mess: Separate kitchens and dining halls for vegetarian and non-vegetarian food; dividing system for mess bill.
+Breakfast: 7:30 a.m. – 8:50 a.m.
+Lunch: 12:50 p.m. – 1:30 p.m.
+Tea: 5:15 p.m. – 6:15 p.m.
+Dinner: 7:00 p.m. – 8:00 p.m.
+Associate wardens: Dr. S. Dheenathayalan and Dr. S. Chithiraikumar are listed.
+Resident wardens: Mr. R. Marichamy – Hostel I; Mr. S. Velraj – Hostel II.
+Hostel office: 04632 248104.
+Hostel I contacts: 04632 – 248805, 248404.
+Hostel II contacts: 04632 – 248100, 248200.
+Sports: Volleyball: 2 courts; table tennis: 2; carrom: 4; chess: 3.
+Current hostel fee: Please contact National Engineering College for more details.
+Official source: https://nec.edu.in/hostel-facilities/
+Official source: https://nec.edu.in/gents-hostel-1-2/
+Official source: https://nec.edu.in/ladies-hostel/
+Transport
+Current routes/locations: Vilathikulam, Aruppukkottai, Tirunelveli, Tuticorin, Viruthunagar, Sivakasi, Sattur, Rajapalayam, Ettayapuram, Sankarankovil and Kovilpatti.
+Current bus count: 31 buses on the current Transport Facility page.
+Students using transport: 945.
+Faculty using transport: 171.
+Arrival: Buses report to the college before 9:00 a.m.
+Normal departure: 5:40 p.m.
+Special bus: 6:30 p.m. for students attending special classes or using internet/library facilities.
+Older transport page: An older official NEC transportation page says 29 buses and 5:30 p.m. departure. Because the current Transport Facility page lists 31 buses and 5:40 p.m., the chatbot should use the newer page for current information.
+Exact pickup points: Not listed in the current route summary. Contact NEC for an exact stop/pickup point if it is not available in a current official route document.
+Transport fee: Only state a fee when the current official NEC transport fee is published.
+Transport manager: V. Alagar Ramanujam.
+Transport manager phone: 9944000412.
+Transport manager email: Use the current official NEC transport page for the current email.
+Current transport fee: Please contact National Engineering College for more details.
+Official source: https://nec.edu.in/transport-facility/
+Library
+Library collection date: Official library collection figures are stated as up to 30-04-2026.
+Books: 31,495 titles and 63,211 volumes.
+Reference books: 1,056 titles and 1,126 volumes.
+Book bank: 693 titles and 3,319 volumes.
+Student projects: 6,682 projects since 2004.
+Back volumes: 3,764 since 1993.
+CDs: 3,372 books and periodicals CDs.
+Dailies: 19.
+Technical magazines: 26 volumes.
+E-journals: IEEE ASPP – 208; ScienceDirect (Elsevier) – 350.
+E-books: EBSCO Engineering Core e-Books – 7,642.
+Memberships: DELNET, NDLI Club and e-Shodh Sindhu Consortia.
+Self-learning: SWAYAM-NPTEL and Spoken Tutorial, IIT Bombay.
+Question bank: Anna University question bank since 2002 and Autonomous question bank since 2011.
+Library surveillance: The official library information states that the library is under video-camera surveillance.
+Library contact: The official library contact page should be used for the current librarian name, phone, email and extension.
+Web OPAC
+-Book search by title, author, publisher, subject, ISBN, accession number, call number and keyword.
+-Journal search by journal name, volume and issue.
+-Question-bank search by paper title, semester and year.
+-Non-book materials, project reports and back volumes.
+-Boolean search using AND, OR and NOT.
+Official source: https://nec.edu.in/collection/
+Official source: https://nec.edu.in/web-opac/
+Sports
+Sports and Games and Lakshmi Ammal Sports Academy (LASA) are listed as NEC facilities.
+Health Care
+Health care is listed as an official NEC facility; hostel pages also describe medical support and free medicines for sick students.
+Cafeteria
+Cafeteria/canteen is listed as an official NEC facility.
+Computer Centre
+Common Computer Centre is listed as an official NEC facility.
+E-Learning
+E-learning is listed as an official NEC facility and NEC maintains an LMS.
+Official source: https://nec.edu.in/amenities/
+Official source: https://nec.edu.in/lms/
+Placement
+Placement Training
+-Communication skills
+-Soft skills
+-Confidence building
+-Interview skills
+-Reasoning and aptitude
+-Resume writing
+-Group discussions
+-Mock interviews
+-Career guidance
+-Personality development
+-Industry resource-person programmes
+Placement Statistics
+-2026–2027 CSE: highest salary shown ₹12.5 LPA at ATOA Payments Ltd., Bengaluru.
+-2025–2026 CSE: highest salary shown ₹12.5 LPA at ATOA Payments Ltd., Bengaluru.
+-2025 CSE bulletin: above 90% placement record; highest ₹12.5 LPA; average ₹5.2 LPA; 100+ students placed.
+-2025 ECE bulletin: above 90% placement record; highest ₹16 LPA; average ₹4.55 LPA; 108 students placed.
+-2022–2023: 605 total offers; listed examples: Cognizant 60, Data Pattern 43, TCS 37, Capgemini 35.
+-2021–2022: 626 total placements/offers; 476 students placed; 364 single, 78 dual, 28 triple, 5 four-placement and 1 five-placement cases.
+Companies
+Official records include Cognizant, VVDN, Wipro, Accenture, TCS, Zoho, Comcast, Data Patterns, Capgemini, Hexaware, Renault Nissan, Tessolve, Solartis, Centizen, Ramco, Mistral, Brimma and others.
+Highest Salary
+Always preserve department and academic-year context. Do not convert a department-specific figure into an all-time college-wide figure.
+Average Salary
+Verified department-specific examples: CSE ₹5.2 LPA average in the 2025 bulletin; ECE ₹4.55 LPA average in the 2025 bulletin.
+Placement Contact
+-Placement Convener: Dr. V. Manimaran — 94432 30265.
+-Placement Coordinator: Dr. D. Vigneshkumar — 90039 43550.
+-Placement Coordinator: Mr. M.Sathiskumar — 99526 51676.
+-Placement Centre: 04632 – 226955; 04632 – 222502 ext. 1062 & 1025.
+Official source: https://nec.edu.in/placement/
+Official source: https://nec.edu.in/placement-records/
+Official source: https://nec.edu.in/cse-placement-details/
+Research
+Sponsored Research
+-Crashworthiness of bio-inspired thin-walled conical tubular members — DST-SERB — ₹38,76,550 — Mechanical.
+-Denoising Algorithm for Noise Reduction in MEMS Sensors — ISRO — ₹18,90,960 — EEE.
+-DST Nidhi Scheme inclusive Technology Business Incubator (i-TBI) — DST — ₹56,00,000 — Mechanical.
+-NEC publishes PI, co-PI, funding agency, amount, period and status for research projects.
+Official source: https://nec.edu.in/research/
+Patents
+-NEC publishes patent title, staff/inventors, application number, granted/published status and date.
+-CSE 2023–2024 examples include Anti Theft Floor Mat System, Automatic Floor Cleaning and Mopping Device, Smart Aquarium, Smart waste collecting bin and Machine Learning based Fruit Grading Device.
+Official source: https://nec.edu.in/patents/
+Official source: https://nec.edu.in/research-patents/
+Publications
+NEC and departments publish journal/conference publication and research-statistics information.
+Consultancy
+Consultancy pages publish faculty, organization, nature of work, duration/status and amount.
+Official source: https://nec.edu.in/consultancy/
+Research Centres
+NEC maintains research centres and specialized laboratories; the Research Advisory Board supports sponsored/collaborative research, industry interaction, consultancy and research laboratories.
+Official source: https://nec.edu.in/research-advisory-board/
+MoUs
+Department pages publish industry/institution MoUs.
+Student Life
+Clubs
+-NCC
+-NSS
+-Youth Welfare Club
+-Yoga
+-Eco Club
+-Rotract
+-Junior JCI
+-Readers Park
+-Literary Club
+-Quiz Club
+-Fine Arts
+-Energy Awareness and Audit Cell
+NCC
+NCC is listed as an official student activity.
+NSS
+NSS is listed as an official student activity.
+Sports
+Sports and Games and Lakshmi Ammal Sports Academy are listed.
+Student Achievements
+NEC publishes department-specific achievement pages. Current Science & Humanities records include project presentation, paper presentation and code-debugging prizes in 2025–2026.
+Official source: https://nec.edu.in/s-h-students-achievements/
+Events
+The Events Blog publishes current events such as FDPs, hockey tournament, workshops, Annual Day, Sports Day, International Conference and Graduation Day.
+Official source: https://nec.edu.in/events-blog/
+Student Support
+Anti-Ragging
+Ragging is prohibited on college premises, hostels, canteen, outside campus and student transportation. NEC provides Anti-Ragging Committee/Squad mechanisms.
+Official source: https://nec.edu.in/ragging/
+Grievance
+NEC provides a Grievance Redressal Portal through its official site.
+ICC
+Internal Complaint Committee: Dr. V. Gomathi is listed as Convener; the current page also lists other committee members.
+Official source: https://nec.edu.in/internal-complaint-committee/
+SC/ST
+NEC maintains an SC-ST Committee.
+Official source: https://nec.edu.in/sc-st-committee/
+OBC
+NEC maintains an OBC Cell through the Minority Cell and OBC Cell area.
+Official source: https://nec.edu.in/minority-cell/
+Minority Cell
+The Minority Cell addresses grievances, scholarship awareness, constitutional protections and career-orientation support.
+Official source: https://nec.edu.in/minority-cell/
+Gender Equity
+The Gender Equity Cell promotes gender equality, inclusion and an environment free from gender bias.
+Official source: https://nec.edu.in/gender-equity-cell/
+POSH
+The POSH page publishes the committee, redressal mechanism, handbook, Gazette/Act information and awareness events.
+Official source: https://nec.edu.in/posh/
+Anti-Drug
+Anti Drug Club Committee is linked through the official NEC site navigation.
+Student Counsellor
+Student Counsellor Committee is linked through the official NEC site navigation.
+Official source: https://nec.edu.in/lms/
+Accreditation & Ranking
+NIRF
+The official NEC NIRF page currently exposes NIRF 2026: Overall, Engineering, SDG Institution and Innovation; NIRF 2025: Overall, Engineering, SDG Institution and Innovation; and NIRF 2024 through 2017 Overall/Engineering sections.
+The NIRF landing page provides links to yearly reports. Do not invent a numeric rank unless the linked official report has been ingested.
+Official source: https://nec.edu.in/national-institutional-ranking-framework-nirf/
+NAAC
+NEC has a NAAC section containing NAAC Grade Sheet, IQAC, SSR and DVV Clarification.
+Official source: https://nec.edu.in/national-assessment-and-accreditation-council-naac/
+NBA
+The Courses Offered page states that all undergraduate courses are accredited by NBA and the Institution of Engineers, India.
+Official source: https://nec.edu.in/courses-offered/
+AICTE
+NEC official materials state AICTE approval information; exact current approval should be retrieved from the latest official mandatory disclosure/approval document.
+Mandatory Disclosure
+NEC publishes Mandatory Disclosure and related institutional documents including approval letters, audited statements and Finance Committee information.
+Official source: https://nec.edu.in/
+Alumni
+NEC provides an official Alumni Login page and links to its alumni system.
+Official source: https://nec.edu.in/alumni-login/
+Official source: https://alumni.nec.edu.in/
+Online Services
+LMS
+Official NEC LMS.
+Official source: https://nec.edu.in/lms/
+Web OPAC
+Official library Web OPAC.
+Official source: https://nec.edu.in/web-opac/
+Fee Payment
+Online Fee Payment is linked through the official NEC site. Current fee amounts remain fallback-only.
+Document Verification
+Document Verification System is linked through the official NEC site.
+Scholarship Application
+Scholarship Application Form / ERP Oasys is linked through the official NEC site.
+Alumni Login
+Alumni Login is available through the official NEC site.
+News & Events
+The NEC homepage and Events Blog publish current news, achievements and events. Current NEC material includes Best Outgoing Students 2025–2026, International Conference 26–27 March 2026, Smart India Hackathon activities and the NEC-TryCAE Technobation Centre.
+Official source: https://nec.edu.in/
+Official source: https://nec.edu.in/events-blog/
+Contact
+Principal office: 04632 – 222502.
+Principal email: principal@nec.edu.in.
+Mobile numbers: 93859 76674 and 93859 76684 are listed on NEC's official pages.
+Address: National Engineering College (Autonomous), K.R. Nagar, Kovilpatti, Thoothukudi District, Tamil Nadu – 628503.
+Website: https://nec.edu.in/
+Transport: Transport Manager: V. Alagar Ramanujam; 9944000412.
+Hostel office: Gents Hostel Office: 04632 248104.
+Ladies Hostel office: 63822 78083 on the current dedicated ladies hostel page.
+Department contact: Use the current official department page for the current HOD/faculty contact.
+Placement questions must use the dedicated Placement Centre contact, not the Principal contact.
+Official source: https://nec.edu.in/
+STRICT FALLBACK
+-Current tuition fee → Please contact National Engineering College for more details.
+-Current hostel fee → Please contact National Engineering College for more details.
+-Current transport fee → Please contact National Engineering College for more details.
+-Online admission availability → Please contact National Engineering College for more details.
+-Exact current NIRF numeric rank when the official report has not been ingested → Please contact National Engineering College for more details.
+-Any unsupported question → Please contact National Engineering College for more details.
+RAG METADATA
+-source_url
+-source_title
+-section
+-subsection
+-department
+-academic_year
+-publication_date
+-retrieval_date
+-source_type
+-is_current
+OFFICIAL SOURCE INDEX
+-https://nec.edu.in/
+-https://nec.edu.in/introduction/
+-https://nec.edu.in/admission/
+-https://nec.edu.in/courses-offered/
+-https://nec.edu.in/departments/
+-https://nec.edu.in/curriculum-and-syllabus/
+-https://nec.edu.in/ug-pg-regulations/
+-https://nec.edu.in/academic-calendar/
+-https://nec.edu.in/instructions/
+-https://nec.edu.in/results/
+-https://nec.edu.in/hostel-facilities/
+-https://nec.edu.in/gents-hostel-1-2/
+-https://nec.edu.in/ladies-hostel/
+-https://nec.edu.in/transport-facility/
+-https://nec.edu.in/collection/
+-https://nec.edu.in/web-opac/
+-https://nec.edu.in/placement/
+-https://nec.edu.in/placement-records/
+-https://nec.edu.in/cse-placement-details/
+-https://nec.edu.in/scholarship-3/
+-https://nec.edu.in/clubs/
+-https://nec.edu.in/research/
+-https://nec.edu.in/sponsored-research/
+-https://nec.edu.in/patents/
+-https://nec.edu.in/research-patents/
+-https://nec.edu.in/consultancy/
+-https://nec.edu.in/research-advisory-board/
+-https://nec.edu.in/events-blog/
+-https://nec.edu.in/iqac-about/
+-https://nec.edu.in/national-institutional-ranking-framework-nirf/
+-https://nec.edu.in/national-assessment-and-accreditation-council-naac/
+-https://nec.edu.in/ragging/
+-https://nec.edu.in/internal-complaint-committee/
+-https://nec.edu.in/sc-st-committee/
+-https://nec.edu.in/minority-cell/
+-https://nec.edu.in/equal-opportunity-cell-2/
+-https://nec.edu.in/gender-equity-cell/
+-https://nec.edu.in/posh/
+-https://nec.edu.in/lms/
+-https://nec.edu.in/alumni-login/
