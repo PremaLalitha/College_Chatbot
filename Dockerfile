@@ -24,5 +24,5 @@ COPY . .
 # Expose port
 EXPOSE 5000
 
-# Run production server using Gunicorn / Waitress
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "--timeout", "120", "app:app"]
+# Run production server using Gunicorn (1 worker to stay under 512MB RAM)
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-5000} --workers 1 --threads 4 --timeout 120 app:app"]

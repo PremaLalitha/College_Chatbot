@@ -193,47 +193,39 @@ def is_college_related_query(question):
 
 
 # ============================================================
-# LOAD EMBEDDING MODEL
+# LOAD EMBEDDING MODEL & CHROMA (LAZY LOADING)
 # ============================================================
 
-print()
-print("Loading embedding model...")
+_embeddings = None
+_vector_db = None
 
-embeddings = HuggingFaceEmbeddings(
-    model_name=EMBEDDING_MODEL
-)
+def get_vector_db():
+    global _embeddings, _vector_db
+    if _vector_db is None:
+        print()
+        print("Loading embedding model...")
+        _embeddings = HuggingFaceEmbeddings(
+            model_name=EMBEDDING_MODEL
+        )
+        print("Embedding model loaded successfully.")
 
-print(
-    "Embedding model loaded successfully."
-)
+        print()
+        print("Loading NEC vector database...")
+        if not os.path.exists(VECTOR_DB_PATH):
+            raise FileNotFoundError(
+                "Chroma database not found.\n"
+                "Run:\n"
+                "python src/load_data.py\n"
+                "python src/create_embeddings.py"
+            )
 
-
-# ============================================================
-# LOAD CHROMA
-# ============================================================
-
-print()
-print("Loading NEC vector database...")
-
-if not os.path.exists(VECTOR_DB_PATH):
-
-    raise FileNotFoundError(
-        "Chroma database not found.\n"
-        "Run:\n"
-        "python src/load_data.py\n"
-        "python src/create_embeddings.py"
-    )
-
-
-vector_db = Chroma(
-    persist_directory=VECTOR_DB_PATH,
-    embedding_function=embeddings,
-    collection_name="nec_knowledge"
-)
-
-print(
-    "Vector database loaded successfully."
-)
+        _vector_db = Chroma(
+            persist_directory=VECTOR_DB_PATH,
+            embedding_function=_embeddings,
+            collection_name="nec_knowledge"
+        )
+        print("Vector database loaded successfully.")
+    return _vector_db
 
 
 # ============================================================
@@ -983,14 +975,15 @@ def chat():
 
     try:
 
+        vdb = get_vector_db()
         # 1. Global semantic search (captures relevant chunks regardless of category tag)
-        global_docs = vector_db.similarity_search(nlp_question, k=6)
+        global_docs = vdb.similarity_search(nlp_question, k=6)
 
         # 2. Category-filtered search if category detected
         cat_docs = []
         if category != "general":
             try:
-                cat_docs = vector_db.similarity_search(nlp_question, k=4, filter={"category": category})
+                cat_docs = vdb.similarity_search(nlp_question, k=4, filter={"category": category})
             except Exception as err:
                 print("Category search error:", err)
 
