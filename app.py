@@ -814,6 +814,36 @@ def home():
     )
 
 
+def retrieve_nec_context(question, top_n=5):
+    """Fallback lightweight text search over nec_knowledge.txt (0 MB RAM overhead)."""
+    kb_path = os.path.join(BASE_DIR, "data", "nec_knowledge.txt")
+    if not os.path.exists(kb_path):
+        return ""
+
+    try:
+        with open(kb_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        sections = [s.strip() for s in content.split("\n\n") if s.strip()]
+        keywords = [w.lower() for w in re.findall(r"\w+", question) if len(w) >= 3]
+        if not keywords:
+            return ""
+
+        scored = []
+        for sec in sections:
+            sec_lower = sec.lower()
+            score = sum(3 if kw in sec_lower else 0 for kw in keywords)
+            if score > 0:
+                scored.append((score, sec))
+
+        scored.sort(key=lambda x: x[0], reverse=True)
+        best = [sec for score, sec in scored[:top_n]]
+        return "\n\n".join(best)
+    except Exception as e:
+        print("Lightweight search error:", e)
+        return ""
+
+
 # ============================================================
 # CHAT
 # ============================================================
@@ -980,41 +1010,32 @@ def chat():
     # 5. RETRIEVAL
     # ========================================================
 
+    context = ""
     try:
-
         vdb = get_vector_db()
-        # 1. Global semantic search (captures relevant chunks regardless of category tag)
-        global_docs = vdb.similarity_search(nlp_question, k=6)
+        if vdb:
+            global_docs = vdb.similarity_search(nlp_question, k=6)
+            cat_docs = []
+            if category != "general":
+                try:
+                    cat_docs = vdb.similarity_search(nlp_question, k=4, filter={"category": category})
+                except Exception as err:
+                    print("Category search error:", err)
 
-        # 2. Category-filtered search if category detected
-        cat_docs = []
-        if category != "general":
-            try:
-                cat_docs = vdb.similarity_search(nlp_question, k=4, filter={"category": category})
-            except Exception as err:
-                print("Category search error:", err)
-
-        # 3. Deduplicate preserving order
-        seen_texts = set()
-        documents = []
-        for doc in global_docs + cat_docs:
-            if doc.page_content not in seen_texts:
-                seen_texts.add(doc.page_content)
-                documents.append(doc)
-
-
+            seen = set()
+            docs = []
+            for d in global_docs + cat_docs:
+                if d.page_content not in seen:
+                    seen.add(d.page_content)
+                    docs.append(f"SECTION: {d.metadata.get('section', 'NEC')}\n\n{d.page_content}")
+            context = "\n\n".join(docs)
     except Exception as error:
+        print("Vector DB retrieval error (falling back to text search):", error)
 
-        print(
-            "Retrieval error:",
-            error
-        )
+    if not context:
+        context = retrieve_nec_context(nlp_question) or retrieve_nec_context(question)
 
-        return respond(FALLBACK)
-
-
-    if not documents:
-
+    if not context:
         return respond(FALLBACK)
 
 
@@ -1130,9 +1151,8 @@ ANSWER:
     except Exception as error:
         print("LLM error:", error)
         # Bulletproof fallback using retrieved context if LLM is offline or unconfigured
-        if documents:
-            best_chunk = documents[0].page_content.strip()
-            answer = f"{best_chunk}\n\n---\n**Contact NEC**:\nMob: 93859 76674, 93859 76684 | Email: principal@nec.edu.in"
+        if context:
+            answer = f"{context.strip()}\n\n---\n**Contact NEC**:\nMob: 93859 76674, 93859 76684 | Email: principal@nec.edu.in"
         else:
             answer = FALLBACK
 
