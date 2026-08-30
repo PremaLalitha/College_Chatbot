@@ -229,26 +229,33 @@ def get_vector_db():
 
 
 # ============================================================
-# LOAD LLM (Groq for Cloud / Render or Ollama for Local)
+# DYNAMIC LLM LOADER (Groq Cloud / Ollama / Fast Fallback)
 # ============================================================
 
-print()
-groq_key = os.getenv("GROQ_API_KEY")
-if groq_key and ChatGroq:
-    print("Loading Cloud LLM (Groq)...")
-    llm = ChatGroq(
-        model_name="llama-3.3-70b-versatile",
-        groq_api_key=groq_key,
-        temperature=0
-    )
-    print("Groq LLM loaded successfully.")
-else:
-    print("Loading Ollama...")
-    llm = ChatOllama(
-        model=OLLAMA_MODEL,
-        temperature=0
-    )
-    print("Ollama loaded successfully.")
+def get_llm():
+    groq_key = os.getenv("GROQ_API_KEY")
+    if groq_key and ChatGroq:
+        try:
+            return ChatGroq(
+                model_name="llama-3.3-70b-versatile",
+                groq_api_key=groq_key,
+                temperature=0,
+                max_retries=1
+            )
+        except Exception as e:
+            print("Groq init error:", e)
+
+    # Try local Ollama only if running locally (not on Render cloud)
+    if not os.getenv("RENDER") and ChatOllama:
+        try:
+            return ChatOllama(
+                model=OLLAMA_MODEL,
+                temperature=0
+            )
+        except Exception as e:
+            print("Ollama init error:", e)
+
+    return None
 
 
 # ============================================================
@@ -1110,11 +1117,15 @@ ANSWER:
     # ========================================================
 
     try:
-        response = llm.invoke(
-            prompt
-        )
-        answer = response.content.strip()
-        answer = clean_answer(answer)
+        active_llm = get_llm()
+        if active_llm is not None:
+            response = active_llm.invoke(
+                prompt
+            )
+            answer = response.content.strip()
+            answer = clean_answer(answer)
+        else:
+            raise ValueError("No active LLM available.")
 
     except Exception as error:
         print("LLM error:", error)
