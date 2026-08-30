@@ -8,7 +8,7 @@ def call_groq_api(prompt):
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
         return None
-    api_key = api_key.strip()
+    api_key = "".join(api_key.split())
 
     url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {
