@@ -3,13 +3,22 @@ import os
 import re
 import difflib
 
-from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_ollama import ChatOllama
 try:
     from langchain_groq import ChatGroq
 except ImportError:
     ChatGroq = None
+
+try:
+    from langchain_ollama import ChatOllama
+except ImportError:
+    ChatOllama = None
+
+try:
+    from langchain_chroma import Chroma
+    from langchain_huggingface import HuggingFaceEmbeddings
+except ImportError:
+    Chroma = None
+    HuggingFaceEmbeddings = None
 
 
 # ============================================================
@@ -201,30 +210,29 @@ _vector_db = None
 
 def get_vector_db():
     global _embeddings, _vector_db
+    if Chroma is None or HuggingFaceEmbeddings is None:
+        return None
     if _vector_db is None:
-        print()
-        print("Loading embedding model...")
-        _embeddings = HuggingFaceEmbeddings(
-            model_name=EMBEDDING_MODEL
-        )
-        print("Embedding model loaded successfully.")
-
-        print()
-        print("Loading NEC vector database...")
-        if not os.path.exists(VECTOR_DB_PATH):
-            raise FileNotFoundError(
-                "Chroma database not found.\n"
-                "Run:\n"
-                "python src/load_data.py\n"
-                "python src/create_embeddings.py"
+        try:
+            print("Loading embedding model...")
+            _embeddings = HuggingFaceEmbeddings(
+                model_name=EMBEDDING_MODEL
             )
+            print("Embedding model loaded successfully.")
 
-        _vector_db = Chroma(
-            persist_directory=VECTOR_DB_PATH,
-            embedding_function=_embeddings,
-            collection_name="nec_knowledge"
-        )
-        print("Vector database loaded successfully.")
+            print("Loading NEC vector database...")
+            if not os.path.exists(VECTOR_DB_PATH):
+                return None
+
+            _vector_db = Chroma(
+                persist_directory=VECTOR_DB_PATH,
+                embedding_function=_embeddings,
+                collection_name="nec_knowledge"
+            )
+            print("Vector database loaded successfully.")
+        except Exception as e:
+            print("Vector DB initialization error:", e)
+            return None
     return _vector_db
 
 

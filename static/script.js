@@ -421,16 +421,21 @@ async function sendQuestion() {
             })
         });
 
-        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(`Server status ${response.status}`);
+        }
+
+        const text = await response.text();
+        const data = text ? JSON.parse(text) : {};
         removeTypingIndicator();
 
         // Display Bot Response
-        addMessage(data.answer, "bot");
+        addMessage(data.answer || "Thank you for asking. Please contact National Engineering College for more details.", "bot");
 
     } catch (error) {
         console.error("Chat Request Error:", error);
         removeTypingIndicator();
-        addMessage("Unable to connect to the NEC chatbot. Please verify Ollama/Flask is running and try again.", "bot");
+        addMessage("Unable to connect to the NEC chatbot. Please try again or contact principal@nec.edu.in.", "bot");
     }
 }
 
