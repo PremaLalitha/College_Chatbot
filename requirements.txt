@@ -1,5 +1,6 @@
 Flask
 python-docx
+requests
 langchain
 langchain-groq
 groq

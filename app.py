@@ -2,6 +2,37 @@ from flask import Flask, render_template, request, jsonify
 import os
 import re
 import difflib
+import requests
+
+def call_groq_api(prompt):
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        return None
+    api_key = api_key.strip()
+
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": "llama-3.3-70b-versatile",
+        "messages": [
+            {"role": "system", "content": "You are the official National Engineering College (NEC) chatbot."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0
+    }
+    try:
+        res = requests.post(url, headers=headers, json=payload, timeout=12)
+        if res.status_code == 200:
+            data = res.json()
+            return data["choices"][0]["message"]["content"]
+        else:
+            print("Groq API error status:", res.status_code, res.text)
+    except Exception as e:
+        print("Groq HTTP request error:", e)
+    return None
 
 try:
     from langchain_groq import ChatGroq
@@ -1142,23 +1173,22 @@ ANSWER:
 
 
     # ========================================================
-    # 8. OLLAMA
+    # 8. GROQ / OLLAMA LLM INVOCATION
     # ========================================================
 
     try:
-        active_llm = get_llm()
-        if active_llm is not None:
-            response = active_llm.invoke(
-                prompt
-            )
-            answer = response.content.strip()
-            answer = clean_answer(answer)
+        ai_ans = call_groq_api(prompt)
+        if ai_ans:
+            answer = clean_answer(ai_ans)
         else:
-            raise ValueError("No active LLM available.")
-
+            active_llm = get_llm()
+            if active_llm is not None:
+                response = active_llm.invoke(prompt)
+                answer = clean_answer(response.content.strip())
+            else:
+                raise ValueError("No LLM available.")
     except Exception as error:
         print("LLM error:", error)
-        # Bulletproof fallback using retrieved context if LLM is offline or unconfigured
         if context:
             answer = f"{context.strip()}\n\n---\n**Contact NEC**:\nMob: 93859 76674, 93859 76684 | Email: principal@nec.edu.in"
         else:
