@@ -1110,30 +1110,20 @@ ANSWER:
     # ========================================================
 
     try:
-
         response = llm.invoke(
             prompt
         )
-
-        answer = (
-            response.content
-            .strip()
-        )
-
-
-        answer = clean_answer(
-            answer
-        )
-
+        answer = response.content.strip()
+        answer = clean_answer(answer)
 
     except Exception as error:
-
-        print(
-            "Ollama error:",
-            error
-        )
-
-        return respond("Unable to generate a response right now. Please try again.")
+        print("LLM error:", error)
+        # Bulletproof fallback using retrieved context if LLM is offline or unconfigured
+        if documents:
+            best_chunk = documents[0].page_content.strip()
+            answer = f"{best_chunk}\n\n---\n**Contact NEC**:\nMob: 93859 76674, 93859 76684 | Email: principal@nec.edu.in"
+        else:
+            answer = FALLBACK
 
 
     # ========================================================
