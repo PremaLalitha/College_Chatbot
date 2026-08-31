@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import os
 import re
 import difflib
@@ -867,6 +867,11 @@ def home():
     return render_template(
         "index.html"
     )
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, "static"), "logo.png", mimetype="image/png")
 
 
 def retrieve_nec_context(question, top_n=5):
