@@ -1079,33 +1079,6 @@ def chat():
 
 
     # ========================================================
-    # 6. BUILD CONTEXT
-    # ========================================================
-
-    context_parts = []
-
-
-    for document in documents:
-
-        section = (
-            document.metadata.get(
-                "section",
-                "NEC"
-            )
-        )
-
-        context_parts.append(
-            f"SECTION: {section}\n\n"
-            f"{document.page_content}"
-        )
-
-
-    context = "\n\n".join(
-        context_parts
-    )
-
-
-    # ========================================================
     # 7. PROMPT
     # ========================================================
 
