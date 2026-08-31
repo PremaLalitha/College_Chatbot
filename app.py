@@ -15,23 +15,39 @@ def call_groq_api(prompt):
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
-    payload = {
-        "model": "llama-3.3-70b-versatile",
-        "messages": [
-            {"role": "system", "content": "You are the official National Engineering College (NEC) chatbot."},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0
-    }
-    try:
-        res = requests.post(url, headers=headers, json=payload, timeout=12)
-        if res.status_code == 200:
-            data = res.json()
-            return data["choices"][0]["message"]["content"]
-        else:
-            print("Groq API error status:", res.status_code, res.text)
-    except Exception as e:
-        print("Groq HTTP request error:", e)
+
+    candidate_models = [
+        "openai/gpt-oss-120b",
+        "groq/compound",
+        "qwen/qwen3.6-27b",
+        "groq/compound-mini",
+        "llama-3.3-70b-versatile"
+    ]
+
+    for model_name in candidate_models:
+        payload = {
+            "model": model_name,
+            "messages": [
+                {"role": "system", "content": "You are the official National Engineering College (NEC) chatbot."},
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": 0
+        }
+        try:
+            res = requests.post(url, headers=headers, json=payload, timeout=12)
+            if res.status_code == 200:
+                data = res.json()
+                msg = data["choices"][0]["message"]
+                content = msg.get("content", "")
+                if content and content.strip():
+                    content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+                    if content:
+                        return content
+            else:
+                print(f"Groq model {model_name} status: {res.status_code}")
+        except Exception as e:
+            print(f"Groq HTTP request error for {model_name}:", e)
+
     return None
 
 try:
