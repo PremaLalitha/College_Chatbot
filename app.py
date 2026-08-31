@@ -864,6 +864,8 @@ def retrieve_nec_context(question, top_n=5):
             content = f.read()
 
         sections = [s.strip() for s in content.split("\n\n") if s.strip()]
+        # Exclude system/developer rule header sections
+        sections = [s for s in sections if "GLOBAL CHATBOT RULES" not in s and "HIERARCHICAL" not in s]
         keywords = [w.lower() for w in re.findall(r"\w+", question) if len(w) >= 3]
         if not keywords:
             return ""
@@ -1163,7 +1165,8 @@ ANSWER:
     except Exception as error:
         print("LLM error:", error)
         if context:
-            answer = f"{context.strip()}\n\n---\n**Contact NEC**:\nMob: 93859 76674, 93859 76684 | Email: principal@nec.edu.in"
+            clean_ctx = re.sub(r"^.*?GLOBAL CHATBOT RULES.*?\n\n", "", context, flags=re.DOTALL | re.IGNORECASE).strip()
+            answer = f"### National Engineering College Details\n\n{clean_ctx}\n\n---\n**Contact NEC**:\nMob: 93859 76674, 93859 76684 | Email: principal@nec.edu.in"
         else:
             answer = FALLBACK
 
